@@ -1,6 +1,6 @@
 {
   "name": "aedes-logging",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Logging module for Aedes, based on Pino",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "precommit": "test",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mcollina/aedes-logging.git"
+    "url": "git+https://github.com/swurzinger/aedes-logging.git"
   },
   "keywords": [
     "aedes",
@@ -29,13 +29,13 @@
     "flush-write-stream": "^1.0.2",
     "mqtt": "^2.8.0",
     "pre-commit": "^1.2.2",
-    "split2": "^2.1.1",
+    "split2": "^4.1.0",
     "standard": "^10.0.2",
     "tap": "^10.3.2",
-    "websocket-stream": "^5.0.0"
+    "websocket-stream": "^5.5.2"
   },
   "dependencies": {
-    "pino": "^4.0.0",
-    "safe-buffer": "^5.0.1"
+    "pino": "^8.4.0",
+    "safe-buffer": "^5.2.1"
   }
 }

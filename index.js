@@ -23,14 +23,16 @@ function logging (opts) {
   servers.forEach(function (server) {
     server.on('listening', function () {
       var address = server.address()
-      if (server.key && server.cert && server.hasOwnProperty('httpAllowHalfOpen')) {
-        address.protocol = 'https'
-      } else if (server.key && server.cert) {
-        address.protocol = 'tls'
-      } else if (server.hasOwnProperty('httpAllowHalfOpen')) {
-        address.protocol = 'http'
-      } else {
-        address.protocol = 'tcp'
+      if (address.hasOwnProperty('protocol')) {
+        if (server.key && server.cert && server.hasOwnProperty('httpAllowHalfOpen')) {
+          address.protocol = 'https'
+        } else if (server.key && server.cert) {
+          address.protocol = 'tls'
+        } else if (server.hasOwnProperty('httpAllowHalfOpen')) {
+          address.protocol = 'http'
+        } else {
+          address.protocol = 'tcp'
+        }
       }
       logger.info(address, 'listening')
     })
